@@ -13,7 +13,8 @@ Astro News is a modern news website built with [Astro](https://astro.build) v5.x
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | [Astro](https://astro.build) | v5.13+ | Static site generation framework |
-| [Bun](https://bun.sh) | v1.2+ | JavaScript runtime and package manager |
+| [Node.js](https://nodejs.org) | v18+ | JavaScript runtime |
+| [npm](https://www.npmjs.com) | v9+ | Package manager |
 | [TypeScript](https://typescriptlang.org) | v5.9+ | Type-safe JavaScript |
 | [Tailwind CSS](https://tailwindcss.com) | v4.1+ | Utility-first CSS framework |
 | [DaisyUI](https://daisyui.com) | v5+ | Tailwind CSS component library |
@@ -67,8 +68,8 @@ astro-news/
 
 ### Prerequisites
 
-- [Bun](https://bun.sh) v1.2+ installed
-- Node.js 18+ (if not using Bun)
+- [Node.js](https://nodejs.org) v18+ installed
+- npm v9+ (comes with Node.js)
 
 ### Installation
 
@@ -78,10 +79,10 @@ git clone https://github.com/salemaziel/astro-news.git
 cd astro-news
 
 # Install dependencies
-bun install
+npm install
 
 # Start development server
-bun dev
+npm run dev
 ```
 
 The development server runs at `http://localhost:4321`.
@@ -90,9 +91,9 @@ The development server runs at `http://localhost:4321`.
 
 | Command | Description |
 |---------|-------------|
-| `bun dev` | Start development server |
-| `bun build` | Build for production |
-| `bun preview` | Preview production build |
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
 
 ## Content Management
 
@@ -179,7 +180,7 @@ For visual content management:
 
 1. Copy `.env.example` to `.env`
 2. Set `RUN_KEYSTATIC=true`
-3. Run `bun dev`
+3. Run `npm run dev`
 4. Access CMS at `http://localhost:4321/keystatic`
 
 Keystatic collection schemas are defined in `src/lib/keystatic/`.
@@ -311,7 +312,7 @@ The project is configured for Vercel deployment:
 1. Push to main branch
 2. Vercel automatically builds and deploys
 
-For other platforms, run `bun build` and deploy the `dist/` directory.
+For other platforms, run `npm run build` and deploy the `dist/` directory.
 
 ## Additional Resources
 
